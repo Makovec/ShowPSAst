@@ -76,7 +76,7 @@ function Show-Ast
 
             # Create the new node to add with the node text of the item type and extent
             $childNode = [Windows.Forms.TreeNode]@{
-                Text = $child.GetType().Name + (" [{0},{1})" -f $child.Extent.StartOffset,$child.Extent.EndOffset)
+                Text = $child.GetType().Name + (" [{0},{1}]" -f $child.Extent.StartOffset,$child.Extent.EndOffset)
                 Tag = $child
             }
             $null = $nodeList.Add($childNode)
